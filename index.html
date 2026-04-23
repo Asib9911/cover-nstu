@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cover Page Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Cover Page Generator</h2>
+
+<div class="form">
+  <input id="title" placeholder="Report Title">
+  <input id="courseName" placeholder="Course Name">
+  <input id="courseCode" placeholder="Course Code">
+
+  <input id="studentName" placeholder="Student Name">
+  <input id="studentId" placeholder="Student ID">
+  <input id="yearTerm" placeholder="Year & Term">
+
+  <input id="teacherName" placeholder="Teacher Name">
+  <input id="designation" placeholder="Designation">
+
+  <!-- NEW FIELD -->
+  <input id="department" placeholder="Department Name">
+
+  <button onclick="generate()">Generate</button>
+  <button onclick="downloadPDF()">Download PDF</button>
+</div>
+
+<!-- COVER PAGE -->
+<div id="preview" class="page">
+
+  <h1 id="pTitle">Report Title</h1>
+
+  <p><b>Course Name:</b> <span id="pCourseName"></span></p>
+  <p><b>Course Code:</b> <span id="pCourseCode"></span></p>
+
+  <!-- TABLE STYLE -->
+  <table>
+    <tr>
+      <th>Submitted by</th>
+      <th>Submitted to</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p id="pStudentName"></p>
+        <p id="pStudentId"></p>
+        <p id="pYearTerm"></p>
+      </td>
+
+      <td>
+        <p id="pTeacherName"></p>
+        <p id="pDesignation"></p>
+      </td>
+    </tr>
+  </table>
+
+  <img src="logo.png" class="logo">
+
+  <!-- UNIVERSITY SECTION -->
+  <h3 id="pDepartment">Department Name</h3>
+  <h2>Noakhali Science and Technology University</h2>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
